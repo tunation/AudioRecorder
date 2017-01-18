@@ -37,10 +37,7 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
-<style type="text/css">
-
-#record {
+<style type="text/css">#record {
  display: block;
  padding: .4em .8em;
  text-decoration: none;
@@ -55,11 +52,13 @@
  position: absolute;
  top: 25%;
  left: 25%;
-}
-</style>
+}</style>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
 
-    <script type="text/javascript">
+
+
+<SCRIPT TYPE="text/javascript"><script type="text/javascript">
  document.addEventListener("deviceready",onDeviceReady, true);
  var audioCapture = '';
 
@@ -69,6 +68,7 @@ function onDeviceReady() {
  getAudio();
  });
 }
+
 
 function getAudio() {
  audioCapture.captureAudio(
@@ -125,13 +125,22 @@ audio capture request.';
  alert('The following error occurred: ' + errReason);
 }
 
+
+
 </script>
+
+</SCRIPT>
 </head>
 
 <body>
     <div class="app">
         <h1>PhoneGap</h1>
-      <button id="record">capture audio</button>
+
+        <button id="record">capture audio</button>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
